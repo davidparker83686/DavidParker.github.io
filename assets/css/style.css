@@ -1,13 +1,4 @@
-/**
-* Template Name: MyPortfolio - v2.2.1
-* Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Inconsolata", monospace;
   color: #0d1e2d;
@@ -337,10 +328,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   }
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-/* Custom Navmenu */
+
 .custom-navmenu {
   background: #0d1e2d;
 }
@@ -361,13 +349,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   padding: 10px 0 !important;
 }
 
-.custom-navmenu .custom-menu li a:hover {
-  text-decoration: none;
-}
 
-.custom-navmenu .custom-menu li.active a {
-  text-decoration: underline;
-}
 
 .custom-navmenu h3 {
   font-size: 20px;
@@ -507,5 +489,14 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 li{
   list-style-type: none;
-  display: inline;
+}
+li a:hover {
+  text-decoration: none;
+}
+
+
+ 
+
+.nav-li{
+    display: inline;
 }
