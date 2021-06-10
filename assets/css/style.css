@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 /* Contact Form */
 .php-email-form .validate {
   display: none;
-  color: red;
+  color: rgb(21, 255, 0);
   margin: 0 0 15px 0;
   font-weight: 400;
   font-size: 13px;
