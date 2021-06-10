@@ -1,13 +1,28 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+$name = $_POST['name'];
+$email= $_POST['email'];
+$email= $_POST['subject'];
+$message= $_POST['message'];
+$to = "davidjparker91@gmail.com";
+$subject = "Mail From website";
+$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message. "\r\n Subject =" . $subject;
+$headers = "From: noreply@davidparker83686.com" . "\r\n" .
+"CC: dp6691.com";
+if($email!=NULL){
+    mail($to,$subject,$txt,$headers);
+}
+// redirect
+// header("Location:thankyou.html");
+?>
+
+
+
+
+
+<?php -->
+
+  $receiving_email_address = 'davidjparker91@gmail.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
@@ -23,19 +38,9 @@
   $contact->from_email = $_POST['email'];
   $contact->subject = $_POST['subject'];
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['message'], 'Message', 10);
 
   echo $contact->send();
-?>
+ ?>
